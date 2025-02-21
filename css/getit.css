@@ -23,8 +23,16 @@ form label {
     font-weight: bold;              /* Texto em negrito */
 }
 
-
-form input[name="titulo"],
+form input[type="text"],
+form input[type="titulo"] {
+    width: 100%;                    /* Inputs ocupam toda a largura do formulario */
+    padding: 10px;                  /* Espaço interno dos inputs */
+    margin-top: 5px;                /* Espaço superior */
+    border-radius: 5px;             /* Bordas arredondadas */
+    border: 1px solid #ddd;         /* Borda cinza clara */
+    box-sizing: border-box;         /* Inclui padding na largura total */
+}
+form input[type="text"],
 form input[name="detalhes"] {  
     width: 100%;
     padding: 10px;
@@ -34,7 +42,7 @@ form input[name="detalhes"] {
     box-sizing: border-box;
 }
 
-form input[name='Enviar'] {
+form input[type="submit"] {
     width: 70%;
     padding: 10px;
     background-color: #4CAF50;      /* Cor verde para o botão */
@@ -45,34 +53,34 @@ form input[name='Enviar'] {
     margin-top: 20px;               /* Espaço acima do botão */
 }
 
-form input[name='Enviar']:hover {
-    background-color: #3e9742;      /* Cor um pouco mais escura ao passar o mouse */
+form input[type="submit"]:hover {
+    background-color: #45a049;      /* Cor um pouco mais escura ao passar o mouse */
 }
 
+/* 🎨 Estilo da lista de anotações */
 ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap;        /* 🔄 Faz as notas quebrarem para nova linha */
+    gap: 20px;              /* 🛑 Espaço entre os post-its */
     justify-content: center;
 }
 
 .note-item {
     background-color: #fffb88;    /* 💛 Cor de post-it amarelo */
-    border: 1px solid #f0e68c;
-    border-radius: 10px;
-    width: 220px;
-    min-height: 150px;
-    padding: 15px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    word-wrap: break-word;
-    transition: transform 0.2s;
+    border: 1px solid #f0e68c;    /* 🎨 Borda clara */
+    border-radius: 10px;          /* 🔄 Cantos arredondados */
+    width: 220px;                 /* 📏 Largura fixa para parecer um post-it */
+    min-height: 150px;            /* 🏗 Altura mínima */
+    padding: 15px;                /* 🧱 Espaço interno */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 🌑 Sombra para o efeito de elevação */
+    text-align: left;             /* 📝 Texto alinhado à esquerda */
+    word-wrap: break-word;        /* 🔄 Quebra o texto longo */
+    transition: transform 0.2s;   /* ✨ Efeito ao passar o mouse */
 }
 
 .note-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);       /* 🔍 Aumenta ligeiramente ao passar o mouse */
 }
-
 

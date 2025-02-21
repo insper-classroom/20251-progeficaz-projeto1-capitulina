@@ -30,7 +30,7 @@ def migrate_json_to_db():
 
 
 def load_template(temp):
-    with open(f'static/templates/{temp}', 'r') as f:
+    with open(f'static/templates/{temp}', 'r',encoding='utf-8') as f:
         return (f.read())
 
 
