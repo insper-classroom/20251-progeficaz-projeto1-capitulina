@@ -4,11 +4,12 @@ def index():
     note_template = load_template('components/note.html')
     notes_li = [
         note_template.format(title=dados['titulo'], details=dados['detalhes'])
-        for dados in load_data('notes.json')
+        for dados in load_data()
     ]
     notes = '\n'.join(notes_li)
 
     return load_template('index.html').format(notes=notes)
+
 
 
 def submit(titulo, detalhes):
@@ -17,3 +18,4 @@ def submit(titulo, detalhes):
     
     add_note({"titulo": titulo, "detalhes": detalhes})
     return "Anotação adicionada com sucesso!", 200
+

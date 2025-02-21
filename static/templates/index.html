@@ -1,6 +1,14 @@
 <!-- DOCTYPE, HTML, HEAD DEVEM CONTINUAR AQUI -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>GetIt - Anotações</title>
+    <!-- ✅ Linha ajustada para carregar o CSS diretamente -->
+    <link rel="stylesheet" href="/static/css/getit.css">
+</head>
 <body>
-  <img src="{{{{ url_for('static', filename='img/logo-getit.png') }}}}">
+  <!-- ✅ Linha ajustada para carregar a imagem diretamente -->
+  <img src="/static/img/logo-getit.png" style="width: 400px; height: auto;">
   <p>Como o Post-it, mas com outro verbo</p>
 
   <form action="/submit" method="POST">
@@ -11,3 +19,6 @@
     <input type="submit" />
   </form>
   <!-- O RESTO DO HTML A PARTIR DAQUI -->
+</body>
+</html>
+
