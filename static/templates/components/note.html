@@ -1,4 +1,13 @@
 <li class="note-item">
   <h3>{title}</h3>
   <p>{details}</p>
+  <div class="button-container">
+      <form class="action-form" action="/delete/{id}" method="POST">
+          <button class="delete-btn" type="submit">🗑️ Apagar</button>
+      </form>
+      <form class="action-form" action="/edit/{id}" method="GET">
+          <button class="edit-btn" type="submit">✏️ Editar</button>
+      </form>
+  </div>
 </li>
+

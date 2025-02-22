@@ -1,0 +1,23 @@
+<!-- edit_note.html -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Nota</title>
+    <link rel="stylesheet" href="/static/css/getit.css">
+</head>
+<body>
+    <h2>Editar Nota</h2>
+    <form action="/update" method="POST">
+        <input type="hidden" name="id" value="{id}">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" value="{titulo}">
+        <label for="detalhes">Detalhes:</label>
+        <textarea id="detalhes" name="detalhes">{detalhes}</textarea>
+        <div class="button-container">
+            <button type="submit" class="edit-btn">Salvar</button>
+            <a href="/" class="delete-btn">Cancelar</a>
+        </div>
+    </form>
+</body>
+</html>
+

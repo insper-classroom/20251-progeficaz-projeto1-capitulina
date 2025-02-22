@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="/static/css/getit.css">
 </head>
 <body>
-  <!-- ✅ Linha ajustada para carregar a imagem diretamente -->
-  <img src="/static/img/logo-getit.png" style="width: 400px; height: auto;">
-  <p>Como o Post-it, mas com outro verbo</p>
 
-  <form action="/submit" method="POST">
-    <label for="titulo">Título</label> 
-    <input id="titulo" type="text" name="titulo" />
-    <label for="detalhes">Detalhes</label>
-    <input id="detalhes" name="detalhes" />
-    <input type="submit" name="Enviar"/>
-  </form>
+  <!-- 🖼️ + 📝 Container da imagem e formulário lado a lado -->
+  <div class="header-container">
+    <div> 
+      <img src="/static/img/logo-getit.png" style="width: 300px; height: auto;">
+      <p>Como o Post-it, mas com outro verbo</p>
+    </div>
+    <form class="add-note-form" action="/submit" method="POST">
+      <label for="titulo">Título</label>
+      <input id="titulo" type="text" name="titulo" />
+      <label for="detalhes">Detalhes</label>
+      <input id="detalhes" name="detalhes" />
+      <input type="submit" name="Enviar" />
+    </form>
+  </div>
 
   <!-- 📝 As anotações do banco serão renderizadas aqui -->
   <ul>
