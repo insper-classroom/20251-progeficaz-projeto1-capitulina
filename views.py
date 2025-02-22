@@ -10,7 +10,7 @@ def index():
     ]
     notes = '\n'.join(notes_li)  # Junta todas as anotações em uma string HTML
 
-    # 🚀 Insere a string de anotações dentro do index.html
+    # Insere a string de anotações dentro do index.html
     return load_template('index.html').format(notes=notes)
 
 

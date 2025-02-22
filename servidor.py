@@ -1,6 +1,5 @@
 from flask import Flask, render_template_string, request, redirect
 import views
-from utils import init_db
 from utils import init_db, migrate_json_to_db
 
 
@@ -39,7 +38,6 @@ def edit_note_route(note_id):
         views.edit_note_page(nota['id'], nota['titulo'], nota['detalhes'])
     )
 
- 
  
 # Rota POST para salvar as alteracoes feitas na nota
 @app.route('/update', methods=['POST'])
