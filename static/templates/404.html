@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Erro 404 - Página não encontrada</title>
+    <link rel="stylesheet" href="/static/css/404.css"> 
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='img/404.png') }}" alt="Erro 404">
+        <h1>Ops! Página não encontrada.</h1>
+        <a href="/" class="btn-voltar">Voltar para a página inicial</a>
+    </div>
+</body>
+</html>

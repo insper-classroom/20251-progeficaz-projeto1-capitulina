@@ -16,10 +16,10 @@ def index():
 
 def submit(titulo, detalhes):
     if not titulo or not detalhes:
-        return "Erro: título e detalhes são obrigatórios", 400
-    
+        return page_not_found()  # Chama a página de erro 404
     add_note({"titulo": titulo, "detalhes": detalhes})
     return "Anotação adicionada com sucesso!", 200
+
 
 def delete(id):
     delete_note(id)
@@ -30,7 +30,7 @@ def edit_note_page(note_id, titulo, detalhes):
     return template.format(id=note_id, titulo=titulo, detalhes=detalhes)
 
 
-
-
+def page_not_found():
+    return load_template('404.html'), 404  # Mostra o HTML de erro 404
 
 

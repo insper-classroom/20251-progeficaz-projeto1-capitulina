@@ -1,11 +1,11 @@
-/* 🎨 Estilo geral da página */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     text-align: center;
 }
 
-/* 📝 Estilo do formulário de adicionar notas */
+
 .add-note-form {
     background-color: #fff;
     padding: 20px;
@@ -46,7 +46,7 @@ body {
     background-color: #3e9742;
 }
 
-/* 🗒️ Lista de notas (post-its) */
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -57,28 +57,28 @@ ul {
 }
 
 .note-item {
-    background-color: #fffb88;          /* 💛 Cor de post-it amarelo */
-    border: 1px solid #f0e68c;          /* 🟨 Borda clara */
-    border-radius: 10px;               /* 🔄 Cantos arredondados */
-    width: 250px;                      /* 📏 Largura fixa */
-    height: 250px;                     /* 📐 Altura fixa para todos iguais */
+    background-color: #ffd1dc;      
+    border: 1px solid #f8b7c8;        
+    border-radius: 10px;              
+    width: 250px;                      
+    height: 250px;                     
     padding: 15px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     text-align: left;
     word-wrap: break-word;
-    overflow-y: auto;                  /* 🎢 Scroll vertical se o texto for muito grande */
-    overflow-x: hidden;                /* 🚫 Sem scroll horizontal */
+    overflow-y: auto;                  
+    overflow-x: hidden;                
     transition: transform 0.2s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;   /* 🏗️ Mantém título no topo e botões na base */
+    justify-content: space-between;   
 }
 
 .note-item:hover {
-    transform: scale(1.05);           /* 🔍 Efeito ao passar o mouse */
+    transform: scale(1.05);           
 }
 
-/* 🎛️ Ajuste para esconder barra de rolagem em alguns navegadores (opcional) */
+
 .note-item::-webkit-scrollbar {
     width: 5px;
 }
@@ -88,7 +88,7 @@ ul {
     border-radius: 10px;
 }
 
-/* 🖱️ Botões de ação (Apagar e Editar) */
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -104,55 +104,56 @@ ul {
     box-shadow: none;
 }
 
-/* 🗑️ Botão de apagar */
+
 .delete-btn {
-    background-color: #ff4d4d;
-    color: white;
+    background-color: #ffd3e0;
+    color: #5c5c5c;
     border-radius: 5px;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    box-shadow: none; /* ✅ Sem sombra no botão de apagar */
+    box-shadow: none; /* Sem sombra no botão de apagar */
 }
 
 .delete-btn:hover {
-    background-color: #e60000;
+    background-color: #ffb3c1;
 }
 
-/* ✏️ Botão de editar */
+
 .edit-btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffd3e0;
+    color: #5c5c5c;
     border-radius: 5px;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    box-shadow: none; /* ✅ Sem sombra no botão de editar */
+    box-shadow: none; 
 }
 
 .edit-btn:hover {
-    background-color: #45a049;
+    background-color: #ffb3c1;
 }
 
-/* 🎯 Container da imagem + formulário lado a lado */
+
 .header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;           /* 🏖️ Espaço entre a imagem e o formulário */
+    gap: 50px;           
     padding: 30px 0;
 }
 
 
-/* 🖼️ Ajustes para a imagem e o texto */
+
 .header-container p {
     font-size: 18px;
     color: #2a2828;
     text-align: center;
     margin-top: 10px;
 }
+
 

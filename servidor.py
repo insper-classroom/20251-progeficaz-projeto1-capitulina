@@ -7,7 +7,6 @@ from utils import init_db, migrate_json_to_db
 app = Flask(__name__)
 
 
-# Configurando a pasta de arquivos estaticos
 app.static_folder = 'static'
 
 
@@ -18,10 +17,12 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit_form():
-    titulo = request.form.get('titulo')  # Obtem o valor do campo 'titulo'
-    detalhes = request.form.get('detalhes')  # Obtem o valor do campo 'detalhes'
-
-    views.submit(titulo, detalhes)
+    titulo = request.form.get('titulo')
+    detalhes = request.form.get('detalhes')
+    
+    resposta, status_code = views.submit(titulo, detalhes)
+    if status_code == 404:
+        return render_template_string(resposta), 404  # Mostra a pagina de erro
     return redirect('/')
 
 
@@ -30,7 +31,7 @@ def delete_note_route(id):
     return views.delete(id)
 
 
-# 📝 Rota GET para carregar a página de edição da nota
+# Rota GET para carregar a pagina de edicao da nota
 @app.route('/edit/<int:note_id>', methods=['GET'])
 def edit_note_route(note_id):
     nota = views.get_note_by_id(note_id)  # Busca a nota pelo ID
@@ -40,7 +41,7 @@ def edit_note_route(note_id):
 
  
  
-# 📝 Rota POST para salvar as alterações feitas na nota
+# Rota POST para salvar as alteracoes feitas na nota
 @app.route('/update', methods=['POST'])
 def update_note_route():
     note_id = request.form['id']
@@ -50,9 +51,15 @@ def update_note_route():
     views.update_note(note_id, titulo, detalhes)  # Atualiza a nota
     return redirect('/')  # Redireciona para a página inicial
  
+@app.errorhandler(404)
+def page_not_found(error):
+    return views.page_not_found()  # Chama a função que retorna o 404.html
 
 if __name__ == '__main__':
     init_db()                # Inicializa o banco, se necessario
-    migrate_json_to_db()     # 🚀 Migra as anotacoes antigas
+    migrate_json_to_db()     # Migra as anotacoes antigas
     app.run(debug=True)
+
+
+
 
